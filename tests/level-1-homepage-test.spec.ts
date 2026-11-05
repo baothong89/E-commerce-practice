@@ -40,7 +40,7 @@ test.describe("TC level 1 - homepage tests", async() => {
         const totalItem = await homePage.searchItemLoc.all();
         for (let i = 0; i < totalItem.length; i++){
             await expect(totalItem[i]).toContainText("istqb",{ignoreCase: true});
-        }
+        };
 
         // Verify Message tính tổng item
         await expect(homePage.searchMessageCountLoc).toHaveText(`Showing all ${totalItem.length} results`);
